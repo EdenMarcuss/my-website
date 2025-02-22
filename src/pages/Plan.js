@@ -1,6 +1,6 @@
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/dist/Style.min.css';
+import 'react-vertical-timeline-component/Style.min.css';
 
 export default function Plan() {
   return (
