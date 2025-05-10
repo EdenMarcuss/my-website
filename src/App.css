@@ -1,4 +1,3 @@
-/* App.css */
 :root {
     --primary-gradient: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
     --nav-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -108,7 +107,75 @@
     font-size: 0.875rem;
 }
 
-/*  Mobile responsive tweaks */
+/* Section Title */
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border-left: 6px solid #3b82f6;
+    padding-left: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Card Container */
+.section-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Image Block */
+.img-block {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+    .img-block img {
+        max-width: 90%;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .img-block p {
+        font-size: 0.9rem;
+        color: #555;
+        margin-top: 0.5rem;
+    }
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+    .back-to-top:hover {
+        background: #2563eb;
+    }
+
+/* Page Container */
+.page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .main-content {
         padding: 1rem;

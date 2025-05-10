@@ -1,86 +1,102 @@
-// src/pages/Team.js
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import '../App.css';
 
 const teamMembers = [
-  {
-    name: 'Karlos Ma',
-    role: '',
-    bio: '',
-    github: '#',
-    linkedin: '#'
-  },
-  {
-    name: 'Edward Zhang',
-    role: '',
-    bio: '',
-    github: '#',
-    linkedin: '#'
-  },
-  {
-    name: 'Todd Tang',
-    role: '',
-    bio: '',
-    github: '#',
-    linkedin: '#'
-  }
+    {
+        name: 'Karlos Ma',
+        role: 'BIM Modeling & Texture Mapping',
+        bio: 'Responsible for modeling the History Wall and manually capturing mural textures to enhance visual fidelity.',
+        github: '#',
+        linkedin: '#'
+    },
+    {
+        name: 'Edward Zhang',
+        role: 'Interaction Design & Brainstorm Area',
+        bio: 'Leads the modeling and interaction implementation for the Brainstorm Area, including layout and screen design.',
+        github: '#',
+        linkedin: '#'
+    },
+    {
+        name: 'Todd Tang',
+        role: 'Point Cloud Processing & Unreal Integration',
+        bio: 'Handles point cloud cleanup, alignment with BIM, and model integration into Unreal Engine for immersive display.',
+        github: '#',
+        linkedin: '#'
+    }
 ];
 
 const Team = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-500">
-            核心团队
-          </span>
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {teamMembers.map((member) => (
-            <div 
-              key={member.name}
-              className="bg-white rounded-2xl shadow-xl p-8 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-            >
-              <div className="flex flex-col items-center">
-                {/* 头像占位符 */}
-                <div className="w-32 h-32 rounded-full bg-gradient-to-r from-blue-400 to-purple-300 mb-6 flex items-center justify-center">
-                  <span className="text-3xl font-bold text-white">
-                    
-                  </span>
+    return (
+        <div className="page-container">
+            <div className="section-card">
+                <h2 className="section-title">
+                    <span>👥</span> Core Team
+                </h2>
+
+                <div
+                    className="team-grid"
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                        gap: '2rem',
+                        marginTop: '2rem',
+                    }}
+                >
+                    {teamMembers.map((member) => (
+                        <div
+                            key={member.name}
+                            className="team-card"
+                            style={{
+                                background: '#ffffff',
+                                borderRadius: '16px',
+                                padding: '1.5rem',
+                                boxShadow: '0 8px 24px rgba(0, 0, 0, 0.05)',
+                                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                            }}
+                        >
+                            <div
+                                className="avatar"
+                                style={{
+                                    width: '90px',
+                                    height: '90px',
+                                    borderRadius: '999px',
+                                    background: 'linear-gradient(135deg, #60a5fa, #a78bfa)',
+                                    color: '#fff',
+                                    fontSize: '2rem',
+                                    fontWeight: 'bold',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    margin: '0 auto 1rem',
+                                }}
+                            >
+                                {member.name.charAt(0)}
+                            </div>
+
+                            <h3 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600 }}>{member.name}</h3>
+                            <p style={{ textAlign: 'center', color: '#3b82f6', fontWeight: 500 }}>{member.role}</p>
+                            <p style={{ marginTop: '1rem', fontSize: '0.95rem', color: '#555', lineHeight: 1.6 }}>
+                                {member.bio}
+                            </p>
+
+                            <div
+                                className="socials"
+                                style={{ marginTop: '1rem', display: 'flex', justifyContent: 'center', gap: '1rem' }}
+                            >
+                                <a href={member.github} target="_blank" rel="noopener noreferrer" style={{ color: '#64748b' }}>
+                                    <FaGithub size={20} />
+                                </a>
+                                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" style={{ color: '#64748b' }}>
+                                    <FaLinkedin size={20} />
+                                </a>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-                
-                <h3 className="text-2xl font-semibold text-gray-900">{member.name}</h3>
-                <p className="text-blue-600 font-medium mt-2">{member.role}</p>
-                <p className="mt-4 text-gray-600 text-center leading-relaxed">
-                  {member.bio}
-                </p>
-                
-                <div className="mt-6 flex space-x-4">
-                  <a 
-                    href={member.github}
-                    className="text-gray-500 hover:text-blue-600 transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaGithub className="h-6 w-6" />
-                  </a>
-                  <a 
-                    href={member.linkedin}
-                    className="text-gray-500 hover:text-blue-600 transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaLinkedin className="h-6 w-6" />
-                  </a>
-                </div>
-              </div>
             </div>
-          ))}
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Team;
