@@ -56,6 +56,21 @@ export default function Scanning() {
                     <img src="/images/history_wall_view.png" alt="History Wall view" />
                     <p>Figure 2: History Wall</p>
                 </div>
+
+                <div className="img-block">
+                    <img src="/images/PointCloud_1.png" alt="History Wall view" />
+                    <p>Figure 3: Point Cloud 1</p>
+                </div>
+
+                <div className="img-block">
+                    <img src="/images/PointCloud_2.png" alt="History Wall view" />
+                    <p>Figure 4: Point Cloud 2</p>
+                </div>
+
+                <div className="img-block">
+                    <img src="/images/PointCloud_3.png" alt="History Wall view" />
+                    <p>Figure 5: Point Cloud 3</p>
+                </div>
             </div>
         </div>
     );
